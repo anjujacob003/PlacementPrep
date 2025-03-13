@@ -1,0 +1,20 @@
+def check_duplicates():
+    
+    n = int(input())  
+    nums = list(map(int, input().split())) 
+    
+    
+    seen = set()
+    
+
+    for num in nums:
+        if num in seen:
+            print("true")
+            return
+        seen.add(num)
+    
+    
+    print("false")
+
+
+check_duplicates()
