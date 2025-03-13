@@ -1,0 +1,24 @@
+def min_chairs_needed(simulation):
+    available_chairs = 0
+    max_chairs = 0
+    
+    for event in simulation:
+        if event == 'C' or event == 'U':  
+            if available_chairs > 0:
+                available_chairs -= 1  
+            else:
+                max_chairs += 1  
+        elif event == 'R' or event == 'L':  
+            available_chairs += 1  
+     
+        max_chairs = max(max_chairs, available_chairs)
+    
+    return max_chairs
+
+
+simulation = input().strip()
+
+result = min_chairs_needed(simulation)
+
+
+print(result)
