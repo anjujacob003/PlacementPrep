@@ -1,0 +1,15 @@
+from collections import Counter
+
+def is_anagram(s, t):
+    
+    return Counter(s) == Counter(t)
+
+
+s = input().strip()
+t = input().strip()
+
+
+if is_anagram(s, t):
+    print("true")
+else:
+    print("false")
